@@ -1,0 +1,26 @@
+{
+    "validUser": {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected": "success",
+        "run": true
+    },
+    "invalidUser": {
+        "username": "standard_user",
+        "password": "secret_ssauce",
+        "expected": "error",
+        "run": true
+    },
+    "noUsername": {
+        "username": "",
+        "password": "secret_sauce",
+        "expected": "error",
+        "run": false
+    },
+    "noPassword": {
+        "username": "standard_user",
+        "password": "",
+        "expected": "error",
+        "run": true
+    }
+}
