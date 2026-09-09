@@ -3,6 +3,20 @@ import { LoginPage } from '../pages/LoginPage';
 import loginData from '../test-data/loginData.json';
 
 
+test('verify login page', async ({ page }) => {
+
+  const loginPage = new LoginPage(page);
+
+  await loginPage.gotoLoginPage();
+  // verify url and page title
+  await expect(loginPage.page).toHaveURL('https://www.saucedemo.com/')
+  await expect(loginPage.page).toHaveTitle('Swag Labs');
+  // visual validation
+  await expect(loginPage.page).toHaveScreenshot();
+
+});
+
+
 test('valid login', async ({ page }) => {
 
   const loginPage = new LoginPage(page);
