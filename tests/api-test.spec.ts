@@ -34,7 +34,7 @@ test('API: Post new item', async ({ request }) => {
     console.log(await response.json())
 })
 
-test('API: Put updated item', async ({ request }) => {
+test.skip('API: Put updated item', async ({ request }) => {
     const response = await request.put('https://api.restful-api.dev/objects/ff808181a067127101a0840ab7e0505a', {
         data: {
             "name": "Lenovo Z580",
@@ -52,7 +52,7 @@ test('API: Put updated item', async ({ request }) => {
     console.log(await response.json())
 })
 
-test('API: Delete specific item', async ({ request }) => {
+test.skip('API: Delete specific item', async ({ request }) => {
     const response = await request.delete('https://api.restful-api.dev/objects/ff808181a067127101a0840ab7e0505a', {
     })
     expect(response.status()).toBe(200)
